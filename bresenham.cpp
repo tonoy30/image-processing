@@ -5,11 +5,10 @@
 #include <math.h>
 
 using namespace std;
-
+float x00, y01, x10, y11;
 void DrawPoint()
 {
-
-    float x1 = 120, y1 = 20, x2 = 300, y2 = 340;
+    float x1 = x00, y1 = y01, x2 = x10, y2 = y11;
     float M, p, dx, dy, x, y, t;
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -117,6 +116,8 @@ void InitDispaly()
 
 int main(int args, char *argV[])
 {
+    cout << "Enter (x1, y1), (x2, y2)" << endl;
+    cin >> x00 >> y01 >> x10 >> y11;
     glutInit(&args, argV);
 
     glutInitWindowPosition(300, 50);
@@ -127,5 +128,6 @@ int main(int args, char *argV[])
 
     glutDisplayFunc(DrawPoint);
     glutMainLoop();
+
     return 0;
 }
