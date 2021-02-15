@@ -1,14 +1,15 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -ne 2 ]; then
   echo "Usage: ./compile linux"
   echo "Usage: ./compile mac"
 else
   os=$1
+  file=$2
   if [ "$os" == "mac" ]; then
-    g++ bresenham_line.cpp -framework OpenGL -framework GLUT -o bresenham_line.o
+    g++ "$file" -framework OpenGL -framework GLUT -o "$file".o
   elif [ "$os" == "linux" ]; then
-    g++ main.cpp -lGL -lGLU -lglut -o main.o 
+    g++ "$file" -lGL -lGLU -lglut -o "$file".o
   else
     echo "Usage: ./compile linux"
     echo "Usage: ./compile mac"
