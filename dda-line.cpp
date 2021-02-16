@@ -4,7 +4,7 @@
 
 double X1, Y1, X2, Y2;
 
-float round_value(float v)
+float RoundValue(float v)
 {
     return floor(v + 0.5);
 }
@@ -31,7 +31,7 @@ void LineDDA(void)
         x += xInc;
         y += yInc;
 
-        glVertex2d(round_value(x), round_value(y));
+        glVertex2d(RoundValue(x), RoundValue(y));
     }
     glEnd();
 
