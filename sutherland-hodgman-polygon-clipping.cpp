@@ -80,8 +80,8 @@ int main(int argc, char **argv)
     /* Set the initial window position and size */
     glutInitWindowPosition(0, 0);
     glutInitWindowSize(640, 480);
-    /* Create the window with title "DDA_Line" */
-    glutCreateWindow("Bresenham Circle Drawing Alog");
+    /* Create the window with title */
+    glutCreateWindow("Sutherland-Hodgman Polygon Clipping Algorithm");
     /* Initialize drawing colors */
     Init();
     /* Call the displaying function */
