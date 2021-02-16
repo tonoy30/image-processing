@@ -22,7 +22,7 @@ void Init()
     glMatrixMode(GL_MODELVIEW);
 }
 
-void midPointCircleAlgo()
+void MidPointCircle()
 {
     int x = 0;
     int y = r;
@@ -59,7 +59,7 @@ void DrawCircle(void)
     glColor3f(0.0, 0.0, 0.0);
     glPointSize(1.0);
 
-    midPointCircleAlgo();
+    MidPointCircle();
 
     glFlush();
 }
