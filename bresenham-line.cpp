@@ -108,6 +108,8 @@ void DrawPoint()
 }
 void InitDispaly()
 {
+    glClearColor(1.0, 1.0, 1.0, 0);
+    glColor3f(0.0, 0.0, 0.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(0, 500, 0, 500);
@@ -116,8 +118,14 @@ void InitDispaly()
 
 int main(int args, char *argV[])
 {
-    cout << "Enter (x1, y1), (x2, y2)" << endl;
-    cin >> x00 >> y01 >> x10 >> y11;
+    printf("Enter two end points of the line to be drawn:\n");
+    printf("\n************************************");
+    printf("\nEnter Point1( X1 , Y1):\n");
+    scanf("%f%f", &x00, &y01);
+    printf("\n************************************");
+    printf("\nEnter Point2( X2 , Y2):\n");
+    scanf("%f%f", &x10, &y11);
+
     glutInit(&args, argV);
 
     glutInitWindowPosition(300, 50);
